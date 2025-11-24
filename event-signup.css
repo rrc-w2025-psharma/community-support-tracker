@@ -1,0 +1,128 @@
+/*
+Name: Princepreet Sharma
+Student ID: 0423413
+*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: #c47e0d;
+    color: #f9f9f9;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+/* Navigation*/
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #f9f9f9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section*/
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 450px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+/* Form fields */
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #d48d1c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #333;
+}
+
+/* Error & Success Messages*/
+#formErrors:empty,
+#formSuccess:empty {
+    display: none;
+}
+
+#formErrors:not(:empty) {
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #fdd; 
+    color: #900;
+}
+
+#formSuccess:not(:empty) {
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #dfd; 
+    color: #060;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #c47e0d; 
+    color: #f9f9f9;
+    text-align: center;
+    padding: 12px 0;
+    margin-top: auto;
+}

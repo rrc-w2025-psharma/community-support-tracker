@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Signup - PiXELL River Financial</title>
+    <link rel="stylesheet" href="event-signup.css">
+</head>
+<body>
+
+    <header>
+        <h1>PiXELL River Financial Community Support</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Donation Tracker</a></li>
+                <li><a href="#">Volunteer Hours</a></li>
+                <li><a href="#">Event Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Event Signup Form</h2>
+        <form id="eventSignupForm">
+            <label for="eventName">Event Name:</label>
+            <input type="text" id="eventName" name="eventName" required>
+
+            <label for="repName">Representative Name:</label>
+            <input type="text" id="repName" name="repName" required>
+
+            <label for="repEmail">Representative Email:</label>
+            <input type="email" id="repEmail" name="repEmail" required>
+
+            <label for="role">Role:</label>
+            <select id="role" name="role" required>
+                <option value="">--Select Role--</option>
+                <option value="sponsor">Sponsor</option>
+                <option value="participant">Participant</option>
+                <option value="organizer">Organizer</option>
+            </select>
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <!-- Placeholder for error messages -->
+        <section id="formErrors"></section>
+
+        <!-- Placeholder for success message -->
+        <section id="formSuccess"></section>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer>
+        <p>&copy; 2025 PiXELL River Financial</p>
+    </footer>
+
+    <script src="event-signup.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 // Temporary object to store form data
-let signupData = {};
+let tempSignups = [];
 
 // Select form and message containers
 const form = document.getElementById('eventSignupForm');
@@ -40,9 +40,17 @@ form.addEventListener('submit', function(e) {
     if (errors.length > 0) {
         errorDiv.innerHTML = errors.join('<br>');
     } else {
-        signupData = { eventName, repName, repEmail, role };
+        // Create object for this signup
+        const signup = { eventName, repName, repEmail, role };
+
+        // Add to temporary array
+        tempSignups.push(signup);
+
+        // Show success message and reset form
         successDiv.innerHTML = "Signup successful!";
-        form.reset(); // Clear form fields
-        console.log(signupData); 
+        form.reset();
+
+        // Check array in console
+        console.log(tempSignups);
     }
 });

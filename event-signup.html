@@ -21,33 +21,34 @@
     </header>
 
     <main>
-        <h2>Event Signup Form</h2>
-        <form id="eventSignupForm">
-            <label for="eventName">Event Name:</label>
-            <input type="text" id="eventName" name="eventName" required>
 
-            <label for="repName">Representative Name:</label>
-            <input type="text" id="repName" name="repName" required>
+        <section class="form-container">
 
-            <label for="repEmail">Representative Email:</label>
-            <input type="email" id="repEmail" name="repEmail" required>
+            <h2>Event Signup Form</h2>
+            <section id="formErrors"></section>
+            <section id="formSuccess"></section>
 
-            <label for="role">Role:</label>
-            <select id="role" name="role" required>
-                <option value="">--Select Role--</option>
-                <option value="sponsor">Sponsor</option>
-                <option value="participant">Participant</option>
-                <option value="organizer">Organizer</option>
-            </select>
+            <form id="eventSignupForm">
+                <label for="eventName">Event Name:</label>  
+                <input type="text" id="eventName" name="eventName" required>
 
-            <button type="submit">Sign Up</button>
-        </form>
+                <label for="repName">Representative Name:</label>
+                <input type="text" id="repName" name="repName" required>
 
-        <!-- Placeholder for error messages -->
-        <section id="formErrors"></section>
+                <label for="repEmail">Representative Email:</label>
+                <input type="email" id="repEmail" name="repEmail" required>
 
-        <!-- Placeholder for success message -->
-        <section id="formSuccess"></section>
+                <label for="role">Role:</label>
+                <select id="role" name="role" required>
+                    <option value="">--Select Role--</option>
+                    <option value="sponsor">Sponsor</option>
+                    <option value="participant">Participant</option>
+                    <option value="organizer">Organizer</option>
+                </select>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
     </main>
 
     <!-- Shared Footer -->

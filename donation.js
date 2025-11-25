@@ -18,14 +18,25 @@ function validateDonation() {
     }
 
     document.getElementById("donationErrors").innerHTML = errors.join("<br>");
-
     return errors.length === 0;
 }
 
+// Create temporary object for donation
+function createDonationObject() {
+    return {
+        charity: document.getElementById("charityName").value.trim(),
+        amount: Number(document.getElementById("donationAmount").value.trim()),
+        date: document.getElementById("donationDate").value.trim(),
+        comment: document.getElementById("donorComment").value.trim()
+    };
+}
+
+// Submit handler
 document.getElementById("donationForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
     if (validateDonation()) {
-        console.log("Form valid");
+        const donation = createDonationObject();
+        console.log("Temporary donation object:", donation);
     }
 });

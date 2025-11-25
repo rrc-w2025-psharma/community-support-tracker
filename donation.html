@@ -3,37 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="donation.css"
     <title>Donation Tracker</title>
 </head>
 <body>
-    <h1>Donation Tracker</h1>
+    <header>
+        <h1>Donation Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Donation Tracker</a></li>
+                <li><a href="#">Volunteer Hours</a></li>
+                <li><a href="#">Event Signup</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <form id="donationForm">
+    <main>
+        <div class="form-container">
+            <form id="donationForm">
 
-        <label>Charity Name:</label>
-        <input type="text" id="charityName">
+                <label>Charity Name:</label>
+                <input type="text" id="charityName">
 
-        <br><br>
+                <label>Donation Amount:</label>
+                <input type="number" id="donationAmount">
 
-        <label>Donation Amount:</label>
-        <input type="number" id="donationAmount">
+                <label>Date of Donation:</label>
+                <input type="date" id="donationDate">
 
-        <br><br>
+                <label>Comment (Optional):</label>
+                <textarea id="donorComment"></textarea>
 
-        <label>Date of Donation:</label>
-        <input type="date" id="donationDate">
+                <div id="donationErrors"></div>
 
-        <br><br>
-
-        <label>Comment (Optional):</label>
-        <textarea id="donorComment"></textarea>
-
-        <br><br>
-
-        <div id="donationErrors" style="color:red;"></div>
-
-        <button type="submit">Add Donation</button>
-    </form>
+                <button type="submit">Add Donation</button>
+            </form>
+        </div>
+    </main>
 
     <script src="donation.js"></script>
 </body>
